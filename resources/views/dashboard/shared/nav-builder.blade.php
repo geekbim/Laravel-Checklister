@@ -19,7 +19,7 @@ if(!function_exists('renderDropdown')){
             for($i = 0; $i < count($data); $i++){
                 if( $data[$i]['slug'] === 'link' ){
                     echo '<li class="c-sidebar-nav-item">';
-                    echo '<a class="c-sidebar-nav-link" href="' . url($data[$i]['href']) . '">';
+                    echo '<a class="c-sidebar-nav-link" href="/home">';
                     echo '<span class="c-sidebar-nav-icon"></span>' . $data[$i]['name'] . '</a></li>';
                 }elseif( $data[$i]['slug'] === 'dropdown' ){
                     renderDropdown( $data[$i] );
@@ -40,7 +40,7 @@ if(!function_exists('renderDropdown')){
             @foreach($appMenus['sidebar menu'] as $menuel)
                 @if($menuel['slug'] === 'link')
                     <li class="c-sidebar-nav-item">
-                        <a class="c-sidebar-nav-link" href="{{ url($menuel['href']) }}">
+                        <a class="c-sidebar-nav-link" href="/home">
                         @if($menuel['hasIcon'] === true)
                             @if($menuel['iconType'] === 'coreui')
                                 <i class="{{ $menuel['icon'] }} c-sidebar-nav-icon"></i>
